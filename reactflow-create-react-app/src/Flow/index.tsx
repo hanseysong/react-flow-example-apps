@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback } from "react";
 import ReactFlow, {
   Node,
   useNodesState,
@@ -6,14 +6,14 @@ import ReactFlow, {
   addEdge,
   Connection,
   Edge,
-} from 'reactflow';
+} from "reactflow";
 
-import CustomNode from './CustomNode';
+import CustomNode from "./CustomNode";
 
 // this is important! You need to import the styles from the lib to make it work
-import 'reactflow/dist/style.css';
+import "reactflow/dist/style.css";
 
-import './Flow.css';
+import "./Flow.css";
 
 const nodeTypes = {
   custom: CustomNode,
@@ -21,32 +21,26 @@ const nodeTypes = {
 
 const initialNodes: Node[] = [
   {
-    id: '1',
-    type: 'input',
-    data: { label: 'Node 1' },
+    id: "1",
+    type: "input",
+    data: { label: "你叫什么名字?" },
     position: { x: 250, y: 5 },
   },
   {
-    id: '2',
-    data: { label: 'Node 2' },
+    id: "2",
+    data: { label: "Node 2" },
     position: { x: 100, y: 100 },
   },
   {
-    id: '3',
-    data: { label: 'Node 3' },
+    id: "3",
+    data: { label: "Node 3" },
     position: { x: 400, y: 100 },
-  },
-  {
-    id: '4',
-    data: { label: 'Node 4' },
-    position: { x: 400, y: 200 },
-    type: 'custom',
   },
 ];
 
 const initialEdges: Edge[] = [
-  { id: 'e1-2', source: '1', target: '2', animated: true },
-  { id: 'e1-3', source: '1', target: '3', animated: true },
+  { id: "e1-2", source: "1", target: "2", animated: true },
+  { id: "e2-3", source: "2", target: "3", animated: true },
 ];
 
 function Flow() {
